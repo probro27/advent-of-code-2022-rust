@@ -15,8 +15,7 @@ fn contains_overlap(pair1: Vec<&str>, pair2: Vec<&str>) -> i32 {
     let pair2_elements = (pair2[0].parse::<i32>().unwrap_or_else(|error| panic!("{}", error)), pair2[1].parse::<i32>().unwrap_or_else(|error| panic!("{}", error)));
     if (pair1_elements.0 <= pair2_elements.1 && pair1_elements.1 >= pair2_elements.1) || (pair1_elements.1 >= pair2_elements.0 && pair2_elements.1 >= pair1_elements.1) {
         1
-    }
-    else if (pair1_elements.0 <= pair2_elements.0 && pair1_elements.1 >= pair2_elements.1) || (pair1_elements.0 >= pair2_elements.0 && pair2_elements.1 >= pair1_elements.1) {
+    } else if (pair1_elements.0 <= pair2_elements.0 && pair1_elements.1 >= pair2_elements.1) || (pair1_elements.0 >= pair2_elements.0 && pair2_elements.1 >= pair1_elements.1) {
         1
     } else {
         0
