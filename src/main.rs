@@ -12,6 +12,7 @@ fn solve(day: i32, input: String) -> Solution {
     match day {
         1 => solutions::day01::solve(input),
         2 => solutions::day02::solve(input),
+        3 => solutions::day03::solve(input),
         _ => panic!("This day doesn't exist")
     }
 }
